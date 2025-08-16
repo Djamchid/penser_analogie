@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les méthodes d'analogie selon différents penseurs</title>
+    <title>Les méthodes d'analogie selon les grands penseurs</title>
     <style>
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -60,7 +60,6 @@
             font-weight: bold;
             color: #333;
             border-bottom: 2px solid #ddd;
-            width: 16.66%;
         }
         td {
             padding: 12px;
@@ -101,6 +100,156 @@
             margin: 2px;
         }
         
+        .intro-text {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            font-size: 1.1em;
+            line-height: 1.6;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .math-example {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .math-header {
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .math-subtitle {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .problem-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(252, 182, 159, 0.3);
+        }
+        
+        .problem-title {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #d84315;
+            margin-bottom: 15px;
+        }
+        
+        .isometry-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .isometry-card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .isometry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-color: #667eea;
+        }
+        
+        .permutation {
+            font-family: monospace;
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 5px 0;
+        }
+        
+        .solution-box {
+            background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 166, 255, 0.3);
+        }
+        
+        .formula {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1a237e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+            font-size: 1.2em;
+            font-family: 'Cambria Math', serif;
+        }
+        
+        .step {
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid white;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .math-table {
+            margin: 30px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .math-table th {
+            background: #4a5568;
+            color: white;
+            padding: 15px;
+        }
+        
+        .space1-math {
+            background: #f0f7ff;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+        }
+        
+        .space2-math {
+            background: #f0fff4;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .math {
+            font-family: 'Cambria Math', 'Cambria', serif;
+            font-size: 1.1em;
+            color: #1a237e;
+            margin: 10px 0;
+            display: block;
+        }
+        
         @media (max-width: 768px) {
             body {
                 padding: 10px;
@@ -110,6 +259,9 @@
             }
             th, td {
                 padding: 8px;
+            }
+            .isometry-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -125,6 +277,14 @@
                 <div class="thinker-subtitle">Analogie de proportion</div>
             </div>
             <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Composante</th>
+                        <th style="width: 40%;">Espace 1 (Problématique)</th>
+                        <th style="width: 40%;">Espace 2 (Résolu)</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td class="component">Éléments</td>
                     <td class="space-source"><span class="term">Analogon</span> (A, B)</td>
@@ -145,6 +305,7 @@
                     <td class="space-source"><span class="term">Kata analogian</span> (selon la proportion)</td>
                     <td class="space-target">Conservation du <span class="term">logos</span> (rapport)</td>
                 </tr>
+                </tbody>
             </table>
         </div>
 
@@ -155,6 +316,14 @@
                 <div class="thinker-subtitle">"How to Solve It" - Heuristique mathématique</div>
             </div>
             <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Composante</th>
+                        <th style="width: 40%;">Espace 1 (Problématique)</th>
+                        <th style="width: 40%;">Espace 2 (Résolu)</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td class="component">Éléments</td>
                     <td class="space-source"><span class="term">Unknown</span>, <span class="term">Data</span>, <span class="term">Condition</span></td>
@@ -175,6 +344,7 @@
                     <td class="space-source"><span class="term">Generalization</span></td>
                     <td class="space-target"><span class="term">Specialization</span> ou <span class="term">Variation</span></td>
                 </tr>
+                </tbody>
             </table>
         </div>
 
@@ -185,6 +355,14 @@
                 <div class="thinker-subtitle">Structure-Mapping Theory</div>
             </div>
             <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Composante</th>
+                        <th style="width: 40%;">Espace 1 (Problématique)</th>
+                        <th style="width: 40%;">Espace 2 (Résolu)</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td class="component">Éléments</td>
                     <td class="space-source"><span class="term">Base domain</span> (source)</td>
@@ -205,6 +383,7 @@
                     <td class="space-source"><span class="term">Systematicity principle</span></td>
                     <td class="space-target">Préserver les <span class="term">higher-order relations</span></td>
                 </tr>
+                </tbody>
             </table>
         </div>
 
@@ -215,6 +394,14 @@
                 <div class="thinker-subtitle">"L'Analogie, cœur de la pensée"</div>
             </div>
             <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Composante</th>
+                        <th style="width: 40%;">Espace 1 (Problématique)</th>
+                        <th style="width: 40%;">Espace 2 (Résolu)</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td class="component">Éléments</td>
                     <td class="space-source"><span class="term">Situation source</span></td>
@@ -235,6 +422,7 @@
                     <td class="space-source"><span class="term">Slippage</span> conceptuel</td>
                     <td class="space-target"><span class="term">Pressure</span> des contraintes</td>
                 </tr>
+                </tbody>
             </table>
         </div>
 
@@ -245,6 +433,14 @@
                 <div class="thinker-subtitle">Créativité par analogie</div>
             </div>
             <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Composante</th>
+                        <th style="width: 40%;">Espace 1 (Problématique)</th>
+                        <th style="width: 40%;">Espace 2 (Résolu)</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td class="component">Éléments</td>
                     <td class="space-source"><span class="term">Familiar</span></td>
@@ -265,6 +461,7 @@
                     <td class="space-source"><span class="term">Compressed conflict</span></td>
                     <td class="space-target"><span class="term">Book title</span> (métaphore paradoxale)</td>
                 </tr>
+                </tbody>
             </table>
         </div>
 
@@ -275,6 +472,14 @@
                 <div class="thinker-subtitle">Théorie de résolution inventive</div>
             </div>
             <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Composante</th>
+                        <th style="width: 40%;">Espace 1 (Problématique)</th>
+                        <th style="width: 40%;">Espace 2 (Résolu)</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td class="component">Éléments</td>
                     <td class="space-source"><span class="term">Système technique</span> actuel</td>
@@ -295,8 +500,17 @@
                     <td class="space-source"><span class="term">Lois d'évolution</span></td>
                     <td class="space-target"><span class="term">Matrice de contradiction</span></td>
                 </tr>
+                </tbody>
             </table>
         </div>
+
+        <!-- Introduction Dalili -->
+        <div class="intro-text">
+            <h2 style="color: #1a237e; text-align: center;">Synthèse unificatrice</h2>
+            <p>Le tableau suivant montre que <strong>toutes les méthodes précédentes procèdent de la même logique fondamentale</strong> : établir une correspondance structurée entre deux espaces pour transférer une solution d'un domaine résolu vers un domaine problématique.</p>
+            <p>Cette quintessence épure des décennies de théorisation en quatre composantes universelles, offrant ainsi un méta-modèle capable d'englober toutes les variations de la pensée analogique.</p>
+        </div>
+
         <!-- Djamchid Dalili -->
         <div class="thinker-section dalili">
             <div class="thinker-header">
@@ -304,6 +518,14 @@
                 <div class="thinker-subtitle">Quintessence des méthodes de résolution par analogie</div>
             </div>
             <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Composante</th>
+                        <th style="width: 40%;">Espace 1 (Problématique)</th>
+                        <th style="width: 40%;">Espace 2 (Résolu)</th>
+                    </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td class="component">Éléments</td>
                     <td class="space-source"><span class="term">Espace 1</span> (problématique)</td>
@@ -324,7 +546,173 @@
                     <td class="space-source">Règles exprimées avec les <span class="term">éléments de 1</span></td>
                     <td class="space-target">Règles exprimées avec les <span class="term">éléments de 2</span></td>
                 </tr>
+                </tbody>
             </table>
+        </div>
+
+        <!-- Introduction Injection Canonique -->
+        <div class="intro-text">
+            <h2 style="color: #1a237e; text-align: center;">Application mathématique formelle</h2>
+            <p>L'exemple suivant illustre la <strong>puissance maximale de l'analogie</strong> lorsqu'elle devient morphisme mathématique. Quand on peut établir une injection canonique (ou mieux, un isomorphisme) entre deux espaces, la transposition de solution n'est plus heuristique mais <strong>formellement garantie</strong>.</p>
+            <p>Cette application au groupe diédral D₄ et aux permutations S₄ montre comment un problème géométrique complexe devient un calcul combinatoire systématique grâce à l'injection canonique φ : D₄ ↪ S₄.</p>
+        </div>
+
+        <!-- Exemple Mathématique -->
+        <div class="math-example">
+            <h2 class="math-header">Résolution par Morphisme Injectif</h2>
+            <p class="math-subtitle">D₄ (symétries du carré) ↪ S₄ (permutations)</p>
+            
+            <div class="problem-box">
+                <div class="problem-title">🎯 Problème Géométrique</div>
+                <p><strong>De combien de façons distinctes peut-on colorier les sommets d'un carré avec 3 couleurs (Rouge, Bleu, Vert), si deux coloriages sont considérés identiques quand l'un s'obtient de l'autre par une isométrie du carré ?</strong></p>
+            </div>
+
+            <h3>Établissement du Morphisme Injectif</h3>
+            
+            <div style="background: #fffbf0; border-left: 4px solid #ff9800; padding: 20px; margin: 20px 0; border-radius: 8px;">
+                <h4 style="color: #e65100; margin-top: 0;">📐 Précision mathématique : Injection vs Isomorphisme</h4>
+                <p><strong>L'isomorphisme n'est pas nécessaire !</strong> Une injection canonique φ : D₄ ↪ S₄ suffit.</p>
+                <ul style="margin: 10px 0;">
+                    <li>D₄ a 8 éléments, S₄ en a 24</li>
+                    <li>D₄ forme un sous-groupe de S₄ (pas tout S₄)</li>
+                    <li>L'injection préserve la structure : φ(g₁ ∘ g₂) = φ(g₁) ∘ φ(g₂)</li>
+                    <li>Chaque symétrie correspond à une unique permutation des sommets</li>
+                </ul>
+                <p style="margin-bottom: 0;"><em>Cette injection suffit pour transposer exactement le problème et sa solution, car l'action sur les sommets est fidèlement représentée.</em></p>
+            </div>
+            
+            <div class="isometry-grid">
+                <div class="isometry-card">
+                    <strong>e (identité)</strong><br>
+                    <span class="permutation">(1)(2)(3)(4)</span>
+                </div>
+                <div class="isometry-card">
+                    <strong>r (rotation 90°)</strong><br>
+                    <span class="permutation">(1234)</span>
+                </div>
+                <div class="isometry-card">
+                    <strong>r² (rotation 180°)</strong><br>
+                    <span class="permutation">(13)(24)</span>
+                </div>
+                <div class="isometry-card">
+                    <strong>r³ (rotation 270°)</strong><br>
+                    <span class="permutation">(1432)</span>
+                </div>
+                <div class="isometry-card">
+                    <strong>s₁ (réflexion |)</strong><br>
+                    <span class="permutation">(14)(23)</span>
+                </div>
+                <div class="isometry-card">
+                    <strong>s₂ (réflexion —)</strong><br>
+                    <span class="permutation">(12)(34)</span>
+                </div>
+                <div class="isometry-card">
+                    <strong>s₃ (réflexion /)</strong><br>
+                    <span class="permutation">(24)</span>
+                </div>
+                <div class="isometry-card">
+                    <strong>s₄ (réflexion \)</strong><br>
+                    <span class="permutation">(13)</span>
+                </div>
+            </div>
+
+            <h3>Tableau de Correspondance</h3>
+            
+            <table class="math-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Composante</th>
+                        <th style="width: 37.5%;">Espace 1 : Géométrie</th>
+                        <th style="width: 37.5%;">Espace 2 : Permutations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="component">Éléments</span></td>
+                        <td class="space1-math">
+                            • Carré ABCD<br>
+                            • 8 isométries (groupe D₄)<br>
+                            • 3⁴ = 81 coloriages possibles
+                        </td>
+                        <td class="space2-math">
+                            • Ensemble {1,2,3,4}<br>
+                            • Sous-groupe de S₄<br>
+                            • Actions sur les 4-uplets de couleurs
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="component">Problème</span></td>
+                        <td class="space1-math">
+                            Compter les <span class="highlight">classes d'équivalence</span> de coloriages sous l'action du groupe D₄
+                        </td>
+                        <td class="space2-math">
+                            Compter les <span class="highlight">orbites</span> de 4-uplets sous l'action du groupe de permutations
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="component">Solution</span></td>
+                        <td class="space1-math">
+                            Application directe du <strong>Lemme de Burnside</strong> sur les isométries
+                        </td>
+                        <td class="space2-math">
+                            <span class="math">|Orbites| = (1/|G|) × Σ |Fix(g)|</span>
+                            où Fix(g) = coloriages invariants par g
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="component">Règles</span></td>
+                        <td class="space1-math">
+                            • Composition d'isométries<br>
+                            • r⁴ = e, s² = e<br>
+                            • sr = r³s
+                        </td>
+                        <td class="space2-math">
+                            • Composition de permutations<br>
+                            • Structure de cycles<br>
+                            • Im(φ) ⊊ S₄ (image stricte)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="solution-box">
+                <h3 style="color: white; margin-top: 0;">💡 Résolution par l'Espace 2 (Permutations)</h3>
+                
+                <div class="step">
+                    <strong>Étape 1 : Identifier les points fixes pour chaque permutation</strong><br>
+                    Un coloriage est fixe si les sommets permutés ont la même couleur.
+                </div>
+                
+                <div class="step">
+                    <strong>Étape 2 : Compter les coloriages fixes</strong><br>
+                    • <strong>Identité (1)(2)(3)(4)</strong> : tous les 3⁴ = 81 coloriages<br>
+                    • <strong>Rotation 90° (1234)</strong> : tous les sommets identiques → 3 coloriages<br>
+                    • <strong>Rotation 180° (13)(24)</strong> : paires opposées identiques → 3² = 9 coloriages<br>
+                    • <strong>Rotation 270° (1432)</strong> : tous les sommets identiques → 3 coloriages<br>
+                    • <strong>Réflexion verticale (14)(23)</strong> : paires identiques → 3² = 9 coloriages<br>
+                    • <strong>Réflexion horizontale (12)(34)</strong> : paires identiques → 3² = 9 coloriages<br>
+                    • <strong>Réflexion diagonale (24)</strong> : 2 et 4 identiques, 1 et 3 libres → 3³ = 27 coloriages<br>
+                    • <strong>Réflexion anti-diagonale (13)</strong> : 1 et 3 identiques, 2 et 4 libres → 3³ = 27 coloriages
+                </div>
+                
+                <div class="formula">
+                    Nombre de coloriages distincts = (1/8) × (81 + 3 + 9 + 3 + 9 + 9 + 27 + 27) = <strong>168/8 = 21</strong>
+                </div>
+            </div>
+
+            <div style="background: #f0f4f8; border-radius: 10px; padding: 20px; margin-top: 30px;">
+                <h3 style="color: #1a237e;">🔍 Puissance du Plongement Canonique</h3>
+                <p>L'injection canonique D₄ ↪ S₄ (et non un isomorphisme complet) transforme un problème géométrique visuellement complexe en un problème combinatoire systématique. Cette injection <strong>suffit</strong> car :</p>
+                <ul>
+                    <li>Elle préserve fidèlement l'action du groupe sur les sommets</li>
+                    <li>Aucune information n'est perdue dans la traduction</li>
+                    <li>Le calcul dans S₄ donne exactement le résultat pour D₄</li>
+                </ul>
+                <p><strong>La solution révèle qu'il existe exactement 21 façons distinctes de colorier un carré avec 3 couleurs, modulo les symétries.</strong></p>
+                <p style="margin-top: 15px; padding: 10px; background: #e8f5e9; border-radius: 5px;">
+                    <strong>💡 Insight :</strong> Pour la résolution par analogie, une correspondance parfaite (isomorphisme) est souvent un luxe. Une injection qui préserve la structure pertinente est généralement suffisante - et c'est souvent ce qu'on trouve naturellement entre espaces analogues.
+                </p>
+            </div>
         </div>
     </div>
 </body>
