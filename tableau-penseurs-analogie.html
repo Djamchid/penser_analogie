@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les méthodes d'analogie selon les grands penseurs</title>
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .thinker-section {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+        .thinker-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .thinker-header {
+            background: linear-gradient(135deg, #434343, #000000);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .thinker-subtitle {
+            font-size: 0.7em;
+            font-weight: normal;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: #f5f5f5;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            width: 16.66%;
+        }
+        td {
+            padding: 12px;
+            vertical-align: top;
+            border-bottom: 1px solid #eee;
+        }
+        .component {
+            font-weight: bold;
+            color: #2a5298;
+            background: #e8f0ff;
+            padding: 8px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .space-source {
+            background: #fff9f0;
+            border-left: 3px solid #ff9800;
+        }
+        .space-target {
+            background: #f0fff4;
+            border-left: 3px solid #4caf50;
+        }
+        .aristotle { border-top: 4px solid #9c27b0; }
+        .polya { border-top: 4px solid #2196f3; }
+        .gentner { border-top: 4px solid #ff5722; }
+        .hofstadter { border-top: 4px solid #009688; }
+        .gordon { border-top: 4px solid #ff9800; }
+        .altshuller { border-top: 4px solid #795548; }
+        .dalili { border-top: 4px solid #e91e63; }
+        
+        .term {
+            font-style: italic;
+            color: #666;
+            background: #f9f9f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            display: inline-block;
+            margin: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            table {
+                font-size: 0.85em;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quintessence des méthodes d'analogie</h1>
+        
+        <!-- Aristote -->
+        <div class="thinker-section aristotle">
+            <div class="thinker-header">
+                Aristote (384-322 av. J.-C.)
+                <div class="thinker-subtitle">Analogie de proportion</div>
+            </div>
+            <table>
+                <tr>
+                    <td class="component">Éléments</td>
+                    <td class="space-source"><span class="term">Analogon</span> (A, B)</td>
+                    <td class="space-target"><span class="term">Analogué</span> (C, D)</td>
+                </tr>
+                <tr>
+                    <td class="component">Problème</td>
+                    <td class="space-source">Rapport entre A et B</td>
+                    <td class="space-target">Quel D entretient avec C le même <span class="term">logos</span> ?</td>
+                </tr>
+                <tr>
+                    <td class="component">Solution</td>
+                    <td class="space-source">A : B</td>
+                    <td class="space-target">C : D (proportion identique)</td>
+                </tr>
+                <tr>
+                    <td class="component">Règles</td>
+                    <td class="space-source"><span class="term">Kata analogian</span> (selon la proportion)</td>
+                    <td class="space-target">Conservation du <span class="term">logos</span> (rapport)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Pólya -->
+        <div class="thinker-section polya">
+            <div class="thinker-header">
+                George Pólya (1945)
+                <div class="thinker-subtitle">"How to Solve It" - Heuristique mathématique</div>
+            </div>
+            <table>
+                <tr>
+                    <td class="component">Éléments</td>
+                    <td class="space-source"><span class="term">Unknown</span>, <span class="term">Data</span>, <span class="term">Condition</span></td>
+                    <td class="space-target">Problème <span class="term">related</span> ou <span class="term">auxiliary</span></td>
+                </tr>
+                <tr>
+                    <td class="component">Problème</td>
+                    <td class="space-source">Problème à résoudre</td>
+                    <td class="space-target">"Do you know a <span class="term">related problem</span>?"</td>
+                </tr>
+                <tr>
+                    <td class="component">Solution</td>
+                    <td class="space-source">Solution recherchée</td>
+                    <td class="space-target">"Could you use its <span class="term">result</span>? Its <span class="term">method</span>?"</td>
+                </tr>
+                <tr>
+                    <td class="component">Règles</td>
+                    <td class="space-source"><span class="term">Generalization</span></td>
+                    <td class="space-target"><span class="term">Specialization</span> ou <span class="term">Variation</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Gentner -->
+        <div class="thinker-section gentner">
+            <div class="thinker-header">
+                Dedre Gentner (1983)
+                <div class="thinker-subtitle">Structure-Mapping Theory</div>
+            </div>
+            <table>
+                <tr>
+                    <td class="component">Éléments</td>
+                    <td class="space-source"><span class="term">Base domain</span> (source)</td>
+                    <td class="space-target"><span class="term">Target domain</span></td>
+                </tr>
+                <tr>
+                    <td class="component">Problème</td>
+                    <td class="space-source"><span class="term">Surface features</span></td>
+                    <td class="space-target">Identifier les <span class="term">structural relations</span></td>
+                </tr>
+                <tr>
+                    <td class="component">Solution</td>
+                    <td class="space-source"><span class="term">Systematic mapping</span></td>
+                    <td class="space-target"><span class="term">Candidate inferences</span></td>
+                </tr>
+                <tr>
+                    <td class="component">Règles</td>
+                    <td class="space-source"><span class="term">Systematicity principle</span></td>
+                    <td class="space-target">Préserver les <span class="term">higher-order relations</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Hofstadter -->
+        <div class="thinker-section hofstadter">
+            <div class="thinker-header">
+                Douglas Hofstadter & Emmanuel Sander (2013)
+                <div class="thinker-subtitle">"L'Analogie, cœur de la pensée"</div>
+            </div>
+            <table>
+                <tr>
+                    <td class="component">Éléments</td>
+                    <td class="space-source"><span class="term">Situation source</span></td>
+                    <td class="space-target"><span class="term">Situation cible</span></td>
+                </tr>
+                <tr>
+                    <td class="component">Problème</td>
+                    <td class="space-source"><span class="term">Essence</span> profonde</td>
+                    <td class="space-target"><span class="term">Catégorisation</span> nouvelle</td>
+                </tr>
+                <tr>
+                    <td class="component">Solution</td>
+                    <td class="space-source"><span class="term">Stripping</span> (épurer)</td>
+                    <td class="space-target"><span class="term">Mapping</span> fluide et dynamique</td>
+                </tr>
+                <tr>
+                    <td class="component">Règles</td>
+                    <td class="space-source"><span class="term">Slippage</span> conceptuel</td>
+                    <td class="space-target"><span class="term">Pressure</span> des contraintes</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Gordon Synectics -->
+        <div class="thinker-section gordon">
+            <div class="thinker-header">
+                William J.J. Gordon - Synectique (1961)
+                <div class="thinker-subtitle">Créativité par analogie</div>
+            </div>
+            <table>
+                <tr>
+                    <td class="component">Éléments</td>
+                    <td class="space-source"><span class="term">Familiar</span></td>
+                    <td class="space-target"><span class="term">Strange</span></td>
+                </tr>
+                <tr>
+                    <td class="component">Problème</td>
+                    <td class="space-source">"Making the strange <span class="term">familiar</span>"</td>
+                    <td class="space-target">"Making the familiar <span class="term">strange</span>"</td>
+                </tr>
+                <tr>
+                    <td class="component">Solution</td>
+                    <td class="space-source"><span class="term">Personal analogy</span> (s'identifier)</td>
+                    <td class="space-target"><span class="term">Symbolic</span> / <span class="term">Fantasy analogy</span></td>
+                </tr>
+                <tr>
+                    <td class="component">Règles</td>
+                    <td class="space-source"><span class="term">Compressed conflict</span></td>
+                    <td class="space-target"><span class="term">Book title</span> (métaphore paradoxale)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Altshuller TRIZ -->
+        <div class="thinker-section altshuller">
+            <div class="thinker-header">
+                Genrich Altshuller - TRIZ (1946)
+                <div class="thinker-subtitle">Théorie de résolution inventive</div>
+            </div>
+            <table>
+                <tr>
+                    <td class="component">Éléments</td>
+                    <td class="space-source"><span class="term">Système technique</span> actuel</td>
+                    <td class="space-target"><span class="term">Système analogue</span> (autre domaine)</td>
+                </tr>
+                <tr>
+                    <td class="component">Problème</td>
+                    <td class="space-source"><span class="term">Contradiction technique</span></td>
+                    <td class="space-target"><span class="term">Problème abstrait</span> générique</td>
+                </tr>
+                <tr>
+                    <td class="component">Solution</td>
+                    <td class="space-source"><span class="term">Solution spécifique</span></td>
+                    <td class="space-target"><span class="term">Principe inventif</span> (40 principes)</td>
+                </tr>
+                <tr>
+                    <td class="component">Règles</td>
+                    <td class="space-source"><span class="term">Lois d'évolution</span></td>
+                    <td class="space-target"><span class="term">Matrice de contradiction</span></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Djamchid Dalili -->
+        <div class="thinker-section dalili">
+            <div class="thinker-header">
+                Djamchid Dalili (2025)
+                <div class="thinker-subtitle">Quintessence des méthodes de résolution par analogie</div>
+            </div>
+            <table>
+                <tr>
+                    <td class="component">Éléments</td>
+                    <td class="space-source"><span class="term">Espace 1</span> (problématique)</td>
+                    <td class="space-target"><span class="term">Espace 2</span> (résolu)</td>
+                </tr>
+                <tr>
+                    <td class="component">Problème</td>
+                    <td class="space-source">Problème exprimé avec les <span class="term">éléments de 1</span></td>
+                    <td class="space-target">Problème exprimé avec les <span class="term">éléments de 2</span></td>
+                </tr>
+                <tr>
+                    <td class="component">Solution</td>
+                    <td class="space-source">Solution exprimée avec les <span class="term">éléments de 1</span></td>
+                    <td class="space-target">Solution exprimée avec les <span class="term">éléments de 2</span></td>
+                </tr>
+                <tr>
+                    <td class="component">Règles</td>
+                    <td class="space-source">Règles exprimées avec les <span class="term">éléments de 1</span></td>
+                    <td class="space-target">Règles exprimées avec les <span class="term">éléments de 2</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
